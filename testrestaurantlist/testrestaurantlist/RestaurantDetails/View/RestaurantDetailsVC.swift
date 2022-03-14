@@ -65,11 +65,12 @@ class RestaurantDetailsVC: UIViewController {
         restaurantImage.widthAnchor.constraint(equalToConstant: imageViewWidth).isActive = true
         
         restaurantNameLbl.leftAnchor.constraint(equalTo: restaurantImage.leftAnchor, constant: 8).isActive = true
+        restaurantNameLbl.sizeToFit()
         restaurantNameLbl.topAnchor.constraint(equalTo: restaurantImage.bottomAnchor, constant: interItemVerticalSpacing).isActive = true
         
         descriptionLbl.leftAnchor.constraint(equalTo: restaurantNameLbl.rightAnchor, constant: 4.0).isActive = true
         descriptionLbl.topAnchor.constraint(equalTo: restaurantNameLbl.topAnchor, constant: 0).isActive = true
-        descriptionLbl.rightAnchor.constraint(lessThanOrEqualTo: toView.rightAnchor, constant: interItemHorizontalSpacing).isActive = true
+        descriptionLbl.rightAnchor.constraint(lessThanOrEqualTo: view.safeAreaLayoutGuide.rightAnchor, constant: 4.0).isActive = true
         descriptionLbl.numberOfLines = 0
         
         restaurantHoursLbl.leftAnchor.constraint(equalTo: restaurantNameLbl.leftAnchor).isActive = true
